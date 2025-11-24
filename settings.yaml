@@ -61,3 +61,22 @@ upload:
   # Log file name.
   # If null, log messages are printed to console only.
   log: null
+
+download:
+
+  # Local directory to save downloaded files.
+  # If null, files are saved to the current working directory.
+  save_local_dir: null
+
+  # The file id(s) to download from Google Drive.
+  # Examples:
+  #   - "1A2B3C4D5E6F7G8H9I0J"
+  #   - ["1A2B3C4D5E6F7G8H9I0J", "0J9I8H7G6F5E4D3C2B1A"]
+  # Must match the length of save_local_file if both are lists.
+  fild_id: file_id
+
+  # Log file name.
+  # If null, log messages are printed to console only.
+  log: null
+
+
