@@ -115,7 +115,7 @@ class GoogleDriveTools:
         else:
             return logger
         
-    def _build_proxy_info(proxy_str: str | None):
+    def _build_proxy_info(self, proxy_str: str | None):
         # Build httplib2.ProxyInfo from proxy_str
         if not proxy_str:
             return None
@@ -358,6 +358,8 @@ class GoogleDriveTools:
         
         # Prepare 
         file_name = meta.get("name", file_id)
+        print(save_local_dir)
+        print(file_name)
         local_path = os.path.join(save_local_dir, file_name)
 
         # Download file

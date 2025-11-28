@@ -1,0 +1,50 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "gdrive-tools"  # pip install gdrive-tools
+version = "1.1.0"
+description = "Google Drive upload/download tool with OAuth, proxy, YAML settings, and CLI support."
+readme = "README.md"
+requires-python = ">=3.9"
+
+authors = [
+  { name = "Yue Qu", email = "your_email@example.com" }
+]
+
+license = { text = "MIT License" }
+
+dependencies = [
+  "google-api-python-client",
+  "google-auth-oauthlib",
+  "google-auth-httplib2",
+  "httplib2",
+  "PyYAML",
+  "PySocks",
+]
+
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Utilities",
+  "Topic :: Internet",
+  "Intended Audience :: Developers",
+]
+
+[project.urls]
+Homepage = "https://github.com/<your_github>/gdrive-tools"
+Repository = "https://github.com/<your_github>/gdrive-tools"
+Issues = "https://github.com/<your_github>/gdrive-tools/issues"
+
+# CLI entry point: makes 'gdrive-tools' a command
+[project.scripts]
+gdrive-tools = "gdrivetools.cli:main"
+
+# Tell hatchling which directory contains your package
+[tool.hatch.build.targets.wheel]
+packages = ["gdrivetools"]
